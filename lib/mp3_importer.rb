@@ -7,8 +7,8 @@ class MP3Importer
   end 
   
   def files 
-    self.Dir.entries(@path)
-    self.files.delete_if {|file| file == "." || file == ".."}
+    @files = Dir.entries(@path)
+    @files.delete_if {|file| file == "." || file == ".."}
   end 
   
   
