@@ -10,6 +10,10 @@ class Artist
   def self.find_by_name(name)
     @@ll.detect{|a| a.name == name}
   end
+  
+  def self.create_by_name(name)
+    Artist.new(name)
+  end 
     
   
   def initialize(name)
