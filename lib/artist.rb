@@ -16,7 +16,9 @@ class Artist
   end 
   
   def print_songs
-    self.songs.each do 
+    self.songs.each do |song|
+      puts song 
+    end 
     
   
   def initialize(name)
