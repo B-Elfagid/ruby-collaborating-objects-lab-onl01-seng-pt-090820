@@ -27,13 +27,13 @@ class Artist
     self.find_by_name(name) || create_by_name(name)
   end 
   
-   def self.find(name)
+   def self.find_by_name(name)
     @@all.find do |artist|
       artist.name == name
     end
   end
 
-  def self.create(name)
+  def self.create_by_name(name)
     artist = self.new(name)
     @@all << artist
     artist
