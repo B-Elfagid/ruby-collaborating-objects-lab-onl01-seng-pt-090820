@@ -27,13 +27,18 @@ class Artist
     self.find_by_name(name) || create_by_name(name)
   end 
   
-  def self.find_by_name(name)
-    @@ll.detect{|a| a.name = name}
+   def self.find(name)
+    @@all.find do |artist|
+      artist.name == name
+    end
   end
-  
-  def self.create_by_name(name)
-    Artist.new(name)
-  end 
+
+  def self.create(name)
+    artist = self.new(name)
+    @@all << artist
+    artist
+  end
+
 
 
   def print_songs
