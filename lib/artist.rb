@@ -7,6 +7,9 @@ class Artist
     self.find_by_name(name) || create_by_name(name)
   end 
   
+  def self.find_by_name(name)
+    
+  
   def initialize(name)
     @song = []
     @name = name 
